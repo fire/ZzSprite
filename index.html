@@ -225,9 +225,8 @@ function BuildHTML()
     e.title = 'Mutate sprite sheet.';
     e.onclick = e => 
     {
-        settings.sheetSeed.Set(GenerateRandomSeed());
         settings.displayMode.Set(1)
-        settings.seed.Set(GenerateRandomSeed()); 
+        settings.sheetSeed.Set(GenerateRandomSeed());
         Update(); 
     };
     
