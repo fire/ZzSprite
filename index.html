@@ -208,22 +208,6 @@ function BuildHTML()
     settings.sheetSeed =       new Setting('Sheet Seed', GenerateRandomSeed(), 1e9, 0, 1, 1);
     
     let e;
-    /*e = settingsContainer.appendChild(document.createElement('button'));
-    e.innerHTML = 'Reset';
-    e.title = 'Reset all parameters.';
-    e.onclick = e => 
-    { 
-        // reset defaults
-        for(const setting in settings)
-        {
-            const s = settings[setting];
-            s.SetDefault && s.SetDefault();
-        }
-
-        settings.seed.Set(GenerateRandomSeed()); 
-        settings.sheetSeed.Set(GenerateRandomSeed()); 
-        Update(); 
-    };*/
     
     e = settingsContainer.appendChild(document.createElement('button'));
     e.innerHTML = 'Randomize';
@@ -233,6 +217,17 @@ function BuildHTML()
         settings.sheetSeed.Set(GenerateRandomSeed());
         if (settings.displayMode.Get()==0)
             settings.seed.Set(GenerateRandomSeed()); 
+        Update(); 
+    };
+
+    e = settingsContainer.appendChild(document.createElement('button'));
+    e.innerHTML = 'Mutate';
+    e.title = 'Mutate sprite sheet.';
+    e.onclick = e => 
+    {
+        settings.sheetSeed.Set(GenerateRandomSeed());
+        settings.displayMode.Set(1)
+        settings.seed.Set(GenerateRandomSeed()); 
         Update(); 
     };
     
