@@ -4,7 +4,7 @@ A Tiny Sprite Generator by Frank Force
 
 [Based on a Dweet](https://www.dwitter.net/d/3078) by Firey Fly
 
-# [Live Demo](https://killedbyapixel.github.io/ZzSprite/)
+# [Live Demo](https://ifiregames.itch.io/chibisprite)
 
 ## Features
 
