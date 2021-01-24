@@ -229,6 +229,16 @@ function BuildHTML()
         settings.sheetSeed.Set(GenerateRandomSeed());
         Update(); 
     };
+
+    e = settingsContainer.appendChild(document.createElement('button'));
+    e.innerHTML = 'Animate';
+    e.title = 'Animate sprite sheet.';
+    e.onclick = e => 
+    {
+        settings.displayMode.Set(2)
+        settings.sheetSeed.Set(GenerateRandomSeed());
+        Update(); 
+    };
     
     e = settingsContainer.appendChild(document.createElement('button'));
     e.innerHTML = 'Save Sheet';
