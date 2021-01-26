@@ -214,6 +214,7 @@ function BuildHTML()
     e.title = 'Randomize sprite sheet.';
     e.onclick = e => 
     { 
+        settings.displayMode.Set(0)
         settings.sheetSeed.Set(GenerateRandomSeed());
         if (settings.displayMode.Get()==0)
             settings.seed.Set(GenerateRandomSeed()); 
